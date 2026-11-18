@@ -5,7 +5,7 @@ set -e
 
 APP_NAME="FloatingClock"
 DISPLAY_NAME="Floating Clock"
-BUNDLE_ID="com.pcf0.FloatingClock"
+BUNDLE_ID="com.pcf000.FloatingClock"
 VERSION="1.0"
 
 cd "$(dirname "$0")"
