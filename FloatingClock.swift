@@ -545,7 +545,9 @@ final class ClockHostingView: NSHostingView<ClockFace> {
         if event.modifierFlags.contains(.control), let contextMenu = contextMenu {
             NSMenu.popUpContextMenu(contextMenu, with: event, for: self)
         } else {
-            super.mouseDown(with: event)
+            // Drag the whole window explicitly. Relying on isMovableByWindowBackground
+            // doesn't work here because the hosting view consumes the click itself.
+            window?.performDrag(with: event)
         }
     }
 }
